@@ -56,7 +56,7 @@ const renderModal = (obj) => {
     openModal();
 };
 
-    const request = async () => {
+const request = async () => {
     const response = await fetch(url);
     const data = await response.json();
     renderList(data.results);
@@ -66,18 +66,4 @@ const renderModal = (obj) => {
     });
 };
 
-request(); 
-
-
-
-
-/*fetch(url)
-    .then(response => response.json())
-    .catch(error => alert(`Status: ${error}`))
-    .then((data) => {
-        renderList(data.results);
-        sortSelect.addEventListener('change', (e) => {
-            sortDirection = e.currentTarget.value;
-            renderList(data.results, sortDirection);
-        });
-    }); */
+request();
